@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiuzhuowei.netlify.app</id>
     <title>Gridea</title>
-    <updated>2020-09-30T03:56:57.120Z</updated>
+    <updated>2020-09-30T03:58:33.179Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiuzhuowei.netlify.app"/>
     <link rel="self" href="https://qiuzhuowei.netlify.app/atom.xml"/>
@@ -16,7 +16,7 @@
         <link href="https://qiuzhuowei.netlify.app/post/wei/">
         </link>
         <updated>2020-09-30T03:28:11.000Z</updated>
-        <content type="html"><![CDATA[<p>阿斯顿阿斯顿阿三<img src="https://qiuzhuowei.netlify.app/post-images/1601438210865.JPG" alt="" loading="lazy"></p>
+        <content type="html"><![CDATA[<p>阿斯顿阿斯顿阿三</p>
 ]]></content>
     </entry>
     <entry>
