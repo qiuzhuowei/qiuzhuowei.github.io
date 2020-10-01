@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiuzhuowei.netlify.app</id>
     <title>Gridea</title>
-    <updated>2020-10-01T03:36:20.404Z</updated>
+    <updated>2020-10-01T07:09:34.958Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiuzhuowei.netlify.app"/>
     <link rel="self" href="https://qiuzhuowei.netlify.app/atom.xml"/>
@@ -16,7 +16,54 @@
         <link href="https://qiuzhuowei.netlify.app/post/wei/">
         </link>
         <updated>2020-09-30T03:28:11.000Z</updated>
-        <content type="html"><![CDATA[<p>阿斯顿阿斯顿阿三</p>
+        <summary type="html"><![CDATA[<h1 id="关于cdn">关于CDN</h1>
+<p>如果你是部署在 github pages</p>
+<p>可以直接填写</p>
+<p>https://cdn.jsdelivr.net/gh/你的用户名/你的博客仓库名@master</p>
+<p>如果为其他云储存托管分发</p>
+<p>把 源文件价 output 内的静态资源上传到云储存,填写绑定的域名即可 .</p>
+<figure data-type="image" tabindex="1"><img src="https://upimage.alexhchu.com/2020/04/22/65893bbc87747.png" alt="" loading="lazy"></figure>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="关于cdn">关于CDN</h1>
+<p>如果你是部署在 github pages</p>
+<p>可以直接填写</p>
+<p>https://cdn.jsdelivr.net/gh/你的用户名/你的博客仓库名@master</p>
+<p>如果为其他云储存托管分发</p>
+<p>把 源文件价 output 内的静态资源上传到云储存,填写绑定的域名即可 .</p>
+<figure data-type="image" tabindex="1"><img src="https://upimage.alexhchu.com/2020/04/22/65893bbc87747.png" alt="" loading="lazy"></figure>
+<!-- more -->
+<h1 id="关于鼠标指针设置">关于鼠标指针设置</h1>
+<ul>
+<li>点击效果</li>
+</ul>
+<figure data-type="image" tabindex="2"><img src="https://upimage.alexhchu.com/2020/04/23/f0c42f4f8f901.png" alt="" loading="lazy"></figure>
+<p>演示:</p>
+<figure data-type="image" tabindex="3"><img src="https://upimage.alexhchu.com/2020/04/23/3620409f14fd1.gif" alt="" loading="lazy"></figure>
+<ul>
+<li>鼠标指针</li>
+</ul>
+<p>需要预先把 <code>.cur</code>格式的文件放到主体文件夹 <code>curs</code>下,具体路径为<code>gridea-theme-next\assets\media\curs</code>,已经有默认的一套.</p>
+<figure data-type="image" tabindex="4"><img src="https://upimage.alexhchu.com/2020/04/23/2c9e94422d891.png" alt="" loading="lazy"></figure>
+<p>以此为示例 :</p>
+<p>在设置中填写文件名称,不需要待文件格式名称</p>
+<figure data-type="image" tabindex="5"><img src="https://upimage.alexhchu.com/2020/04/23/f70ca1ea2e7cc.png" alt="" loading="lazy"></figure>
+<p>演示:</p>
+<figure data-type="image" tabindex="6"><img src="https://upimage.alexhchu.com/2020/04/23/475ae5ea1d6c4.gif" alt="" loading="lazy"></figure>
+<p>因为仅为测试文件,所以未全覆盖,有需要的朋友可以直接去:<br>
+<a href="https://zhutix.com/tag/cursors/">https://zhutix.com/tag/cursors/</a>下载所需,<br>
+也可以使用<a href="https://convertio.co/zh/png-cur/">https://convertio.co/zh/png-cur/</a>,把任意图片转换成<code>cur</code>文件使用,但需要注意的是图片大小需要自己设置好,图片太大会不生效.</p>
+<h1 id="博主介绍">博主介绍</h1>
+<p>关闭美化效果<br>
+<img src="https://upimage.alexhchu.com/2020/04/23/ecce36a589809.png" alt="" loading="lazy"><br>
+开启美化效果<br>
+<img src="https://upimage.alexhchu.com/2020/04/23/65e6c4f11363f.gif" alt="" loading="lazy"></p>
+<h1 id="关于加载动画样式">关于加载动画样式</h1>
+<p>开源项目 https://github.com/HubSpot/pace/issues<br>
+可选是否开启,默认关闭.<br>
+关于更多样式选择 : https://www.jsdelivr.com/package/npm/pace-js?path=themes<br>
+示例:<br>
+<img src="https://upimage.alexhchu.com/2020/05/07/3cde4f7c68378.png" alt="" loading="lazy"><br>
+选择样式,复制粘贴即可.</p>
 ]]></content>
     </entry>
     <entry>
@@ -81,8 +128,9 @@
 <p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
 <p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
 <p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+<p>尽情发挥你的才华吧！<br>
+<img src="https://upimage.alexhchu.com/2020/04/22/65893bbc87747.png" alt="" loading="lazy">)<br>
+😘 Enjoy~</p>
 ]]></content>
     </entry>
 </feed>

@@ -1,248 +1,167 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+  <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta name="referrer" content="never">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="kveln">
+  <title>Gridea</title>
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="https://qiuzhuowei.netlify.app/media/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!--  <link href="https://qiuzhuowei.netlify.app/media/css/all.min.css" rel="stylesheet" type="text/css"> -->
+  <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/rss+xml" title="Gridea » Feed" href="https://qiuzhuowei.netlify.app/atom.xml">
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
+  <link href="https://qiuzhuowei.netlify.app/styles/main.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/highlight.min.js"></script>
+  <!-- <script src="https://qiuzhuowei.netlify.app/media/scripts/jquery.min.js"></script> -->
+  <script>hljs.initHighlightingOnLoad();</script>
+  
 
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<meta name="referrer" content="never">
-<meta name="keywords" content="">
-<meta name="description" content="欢迎访问[Gridea]的个人博客">
-<meta name="author" content="kveln">
-<title>Gridea</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
-<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
-<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-<link
-  href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
-  rel='stylesheet' type='text/css'>
-<link rel="alternate" type="application/rss+xml" title="Gridea » Feed"
-  href="https://qiuzhuowei.netlify.app/atom.xml">
-<link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
-<link href="https://qiuzhuowei.netlify.app/styles/main.css" rel="stylesheet">
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-  <div class="container">
-    <a class="navbar-brand" href="https://qiuzhuowei.netlify.app">Gridea</a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-      aria-label="Toggle navigation">
-      Menu
-      <i class="fas fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        
-        <li class="nav-item">
+  </head>
+  <body>
+     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="https://qiuzhuowei.netlify.app">Gridea</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
           
-          <a class="nav-link" href="/">首页</a>
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/">首页</a>
+              
+          </li>
           
-        </li>
-        
-        <li class="nav-item">
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/archives">归档</a>
+              
+          </li>
           
-          <a class="nav-link" href="/archives">归档</a>
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/tags">标签</a>
+              
+          </li>
           
-        </li>
-        
-        <li class="nav-item">
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/post/about">关于</a>
+              
+          </li>
           
-          <a class="nav-link" href="/tags">标签</a>
+          <li class="nav-item">
+              
+              <a class="nav-link" href="https://qiuzhuowei.netlify.app/archives">二十多</a>
+              
+          </li>
           
-        </li>
-        
-        <li class="nav-item">
-          
-          <a class="nav-link" href="/post/about">关于</a>
-          
-        </li>
-        
-        <li class="nav-item">
-          <div class="gridea-search-container">
-            <form id="gridea-search-form" style="position: relative" data-update="1601523360469"
-              action="/search/index.html">
-              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
-              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
-            </form>
-          </div>
-        </li>
-      </ul>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
-<header class="masthead" style="background-image: url('https://qiuzhuowei.netlify.app/media/images/home-bg.jpg')">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        
-          <!-- 首页Header -->
+  </nav>
+  <header class="masthead" style="background-image: url('https://qiuzhuowei.netlify.app/media/images/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <img class="user-avatar" src="/images/avatar.png" alt="头像">
             <h1>Gridea</h1>
             <span class="subheading">温故而知新</span>
           </div>
-        
+        </div>
       </div>
     </div>
-  </div>
-</header>
-  <div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
-      
-      <!-- 每行的总容器 -->
-      <div class="post-row-container">
-        <!-- 第0层；标题 -->
-        <div class="title-floor">
-          <div class="post-title-container">
-            
-            <a href="https://qiuzhuowei.netlify.app/post/wei/">
-              <h2 class="post-title">
-                为
-              </h2>
+  </header>
+      <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+       
+        <div class="post-preview">
+          <a href="https://qiuzhuowei.netlify.app/post/wei/">
+            <h2 class="post-title">
+              为
+            </h2>
             </a>
-          </div>
+            <h3 class="post-subtitle">
+              <h1 id="关于cdn">关于CDN</h1>
+<p>如果你是部署在 github pages</p>
+<p>可以直接填写</p>
+<p>https://cdn.jsdelivr.net/gh/你的用户名/你的博客仓库名@master</p>
+<p>如果为其他云储存托管分发</p>
+<p>把 源文件价 output 内的静态资源上传到云储存,填写绑定的域名即可 .</p>
+<figure data-type="image" tabindex="1"><img src="https://upimage.alexhchu.com/2020/04/22/65893bbc87747.png" alt="" loading="lazy"></figure>
+
+            </h3>
+          <p class="post-meta">
+             <span class="time">2020-09-30</span>
+             <span>,</span>
+             <span class="post-stats">2 min read</span>
+            </p>
         </div>
-        <!-- 第一层：包含文章描述、时间信息、封面图 -->
-        <div class="post-row-first-floor">
-          <div class="post-preview">
+        <hr>
+        <div class="clearfix">
+        </div>
+        
+        <div class="post-preview">
+          <a href="https://qiuzhuowei.netlify.app/post/ce-shi/">
+            <h2 class="post-title">
+              测试
+            </h2>
+            </a>
             <h3 class="post-subtitle">
               
             </h3>
-            <p class="post-meta">
-              <span class="time">2020-09-30</span>
-              <span>,</span>
-              <span class="post-stats">1 min read</span>
+          <p class="post-meta">
+             <span class="time">2020-09-11</span>
+             <span>,</span>
+             <span class="post-stats">1 min read</span>
             </p>
-          </div>
-          
         </div>
-        <!-- 第二层：下划线、占位标签、tags -->
-        <div class="post-row-sec-floor">
-          <hr>
-          <div class="clearfix"></div>
-          
+        <hr>
+        <div class="clearfix">
         </div>
-      </div>
-      </>
-      
-      <!-- 每行的总容器 -->
-      <div class="post-row-container">
-        <!-- 第0层；标题 -->
-        <div class="title-floor">
-          <div class="post-title-container">
-            
-            <a href="https://qiuzhuowei.netlify.app/post/ce-shi/">
-              <h2 class="post-title">
-                测试
-              </h2>
+        
+        <div class="post-preview">
+          <a href="https://qiuzhuowei.netlify.app/post/hello-gridea/">
+            <h2 class="post-title">
+              Hello Gridea
+            </h2>
             </a>
-          </div>
-        </div>
-        <!-- 第一层：包含文章描述、时间信息、封面图 -->
-        <div class="post-row-first-floor">
-          <div class="post-preview">
-            <h3 class="post-subtitle">
-              
-            </h3>
-            <p class="post-meta">
-              <span class="time">2020-09-11</span>
-              <span>,</span>
-              <span class="post-stats">1 min read</span>
-            </p>
-          </div>
-          
-        </div>
-        <!-- 第二层：下划线、占位标签、tags -->
-        <div class="post-row-sec-floor">
-          <hr>
-          <div class="clearfix"></div>
-          
-        </div>
-      </div>
-      </>
-      
-      <!-- 每行的总容器 -->
-      <div class="post-row-container">
-        <!-- 第0层；标题 -->
-        <div class="title-floor">
-          <div class="post-title-container">
-            
-            <a href="https://qiuzhuowei.netlify.app/post/hello-gridea/">
-              <h2 class="post-title">
-                Hello Gridea
-              </h2>
-            </a>
-          </div>
-        </div>
-        <!-- 第一层：包含文章描述、时间信息、封面图 -->
-        <div class="post-row-first-floor">
-          <div class="post-preview">
             <h3 class="post-subtitle">
               <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
 ✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 
             </h3>
-            <p class="post-meta">
-              <span class="time">2018-12-12</span>
-              <span>,</span>
-              <span class="post-stats">2 min read</span>
+          <p class="post-meta">
+             <span class="time">2018-12-12</span>
+             <span>,</span>
+             <span class="post-stats">2 min read</span>
             </p>
-          </div>
-          
-          <a href="https://qiuzhuowei.netlify.app/post/hello-gridea/" class="post-feature-image" style="background-image: url('https://qiuzhuowei.netlify.app/post-images/hello-gridea.png')">
-          </a>
-          
         </div>
-        <!-- 第二层：下划线、占位标签、tags -->
-        <div class="post-row-sec-floor">
-          <hr>
-          <div class="clearfix"></div>
-          
-          <a href="https://qiuzhuowei.netlify.app/tag/OGxs_WbDq/" class="post-tag">
-            Gridea
-          </a>
-          
+        <hr>
+        <div class="clearfix">
         </div>
+        
+        
+        
       </div>
-      </>
-      
-      <!-- 
-       -->
     </div>
   </div>
-</div>
+
   
-  
-<div class="page bg-color">
-  <ul class="pagination-ul">
-    
-    
-      
-        <li class="pagination-li pagination-active">
-            <a href="/page/../">
-              1
-            </a>
-        </li>
-      
-    
-    
-  </ul>
-</div>
-  <!-- Footer -->
+    <!-- Footer -->
   <footer>
     <div class="container">
       <div class="row">
@@ -263,14 +182,14 @@
               
             
               
-              <!-- <li class="list-inline-item">
+              <li class="list-inline-item">
               <a href="https://qiuzhuowei.netlify.app/atom.xml" target="_blank">
                 <span class="fa-stack fa-lg">
                   <i class="fas fa-circle fa-stack-2x"></i>
                   <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
                 </span>
               </a>
-              </li> -->
+              </li>
           </ul>
           <p class="copyright text-muted">Copyright &copy;<span>Gridea</span><br><a href="https://github.com/getgridea/gridea" class="Themeinfo">Powered by Gridea</a></p>
         </div>
@@ -311,48 +230,5 @@
       }
     }
   })(this));</script>
-  
-    <div id="landlord-parent">
-    <div id="landlord">
-        <div class="message" style="opacity:0"></div>
-        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
-    </div>
-</div>
-
-<script type="text/javascript">
-    if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
-        //移动端
-        console.log("------ 移动端");
-    } else {
-        console.log("------ PC端 " + navigator.userAgent);
-
-        addScript("https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/live2d.js", () => {
-            // 加载完成后再loadlive2d
-            loadlive2d("live2d", "https://qiuzhuowei.netlify.app/media/live2d/assets/hijiki.model.json");
-        });
-
-        var home_Path = "https://qiuzhuowei.netlify.app/";
-        addScript("https://qiuzhuowei.netlify.app/media/live2d/js/message.js", () => { });
-    }
-
-    // 插入js文件，完成后callback
-    function addScript(jsfile, callback) {
-        var landlord_parent = document.getElementById("landlord-parent");
-        var script = document.createElement("script");
-        script.type = "text/javascript";
-        script.src = jsfile;
-        landlord_parent.appendChild(script);
-        script.onload = script.onreadystatechange = function () {
-            if (!this.readyState || this.readyState === "loaded" || this.readyState === "complete") {
-                script.onload = script.onreadystatechange = null;
-                if (callback && typeof callback == "function") {
-                    callback(); //window[callback]();如果传递字符串过来 调用window['函数名']() 调用方法
-                }
-            }
-        };
-    }
-</script>
-  
-</body>
-
+  </body>
 </html>
