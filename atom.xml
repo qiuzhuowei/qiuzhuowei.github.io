@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiuzhuowei.netlify.app</id>
     <title>Gridea</title>
-    <updated>2020-10-04T08:27:49.907Z</updated>
+    <updated>2020-10-04T08:29:10.070Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiuzhuowei.netlify.app"/>
     <link rel="self" href="https://qiuzhuowei.netlify.app/atom.xml"/>
@@ -16,8 +16,11 @@
         <link href="https://qiuzhuowei.netlify.app/post/2020-10-04document/">
         </link>
         <updated>2020-10-04T07:15:46.000Z</updated>
+        <summary type="html"><![CDATA[<p>对于国内的GitHub用户来说，下载项目文件到本地是一个非常头疼的问题，本人在逛GitHub的时候，无意间发现了这一个开源的项目，实测下载项目文件速度提升巨大。项目里讲到可以不用服务器，直接使用cloudflare里的worker就可已免费部署</p>
+]]></summary>
         <content type="html"><![CDATA[<p>对于国内的GitHub用户来说，下载项目文件到本地是一个非常头疼的问题，本人在逛GitHub的时候，无意间发现了这一个开源的项目，实测下载项目文件速度提升巨大。项目里讲到可以不用服务器，直接使用cloudflare里的worker就可已免费部署</p>
-<h5 id="项目地址">项目地址：</h5>
+<!-- more -->
+<h5 id="项目地址">项目地址</h5>
 <p><a href="https://github.com/hunshcn/gh-proxy">https://github.com/hunshcn/gh-proxy</a><br>
 <img src="https://chuguo.netlify.app/img/2020-10-4/4ae0d3a701ffb5f068626db881f11611" alt="enter description here" loading="lazy"></p>
 <h5 id="部署方法">部署方法</h5>
