@@ -9,7 +9,7 @@
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
 <title>开源项目GitHub文件加速gh-proxy | Gridea</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1601800142994">
+<link rel="shortcut icon" href="/favicon.ico?v=1601800373725">
 <link rel="stylesheet" href="/media/css/mist.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -544,17 +544,17 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <p>对于国内的GitHub用户来说，下载项目文件到本地是一个非常头疼的问题，本人在逛GitHub的时候，无意间发现了这一个开源的项目，实测下载项目文件速度提升巨大。项目里讲到可以不用服务器，直接使用cloudflare里的worker就可已免费部署</p>
-<!-- more -->
+              <p>对于国内的GitHub用户来说，下载项目文件到本地是一个非常头疼的问题，本人在逛GitHub的时候，无意间发现了这一个开源的项目，实测下载项目文件速度提升巨大。项目里讲到可以不用服务器，直接使用cloudflare里的worker就可已免费部署。</p>
 <h5 id="项目地址">项目地址</h5>
-<p><a href="https://github.com/hunshcn/gh-proxy">https://github.com/hunshcn/gh-proxy</a><br>
-<img src="https://chuguo.netlify.app/img/2020-10-4/4ae0d3a701ffb5f068626db881f11611" alt="enter description here" loading="lazy"></p>
+<p><a href="https://github.com/hunshcn/gh-proxy">https://github.com/hunshcn/gh-proxy</a></p>
+<!-- more -->
+<figure data-type="image" tabindex="1"><img src="https://chuguo.netlify.app/img/2020-10-4/4ae0d3a701ffb5f068626db881f11611" alt="enter description here" loading="lazy"></figure>
 <h5 id="部署方法">部署方法</h5>
 <p>打开首页：<a href="https://www.cloudflare.com">https://www.cloudflare.com</a><br>
 注册，登陆，找到<code>Workers</code><br>
 <img src="https://chuguo.netlify.app/img/2020-10-4/64ab17737b6060e5c484a81c33aabbe7" alt="enter description here" loading="lazy"></p>
 <p>然后<code>创建 Worker</code></p>
-<figure data-type="image" tabindex="1"><img src="https://chuguo.netlify.app/img/2020-10-4/2635c550d67a4c9e593f206422c7ca36" alt="enter description here" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://chuguo.netlify.app/img/2020-10-4/2635c550d67a4c9e593f206422c7ca36" alt="enter description here" loading="lazy"></figure>
 <p>删除原有的代码，并复制下面这段代码到左侧代码框</p>
 <pre><code class="language-javascript">'use strict'
 
@@ -1219,17 +1219,17 @@ async function proxy(urlObj, reqInit, rawLen) {
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://qiuzhuowei.netlify.app/post/2020-10-04document/"" data-c="
-          &lt;p&gt;对于国内的GitHub用户来说，下载项目文件到本地是一个非常头疼的问题，本人在逛GitHub的时候，无意间发现了这一个开源的项目，实测下载项目文件速度提升巨大。项目里讲到可以不用服务器，直接使用cloudflare里的worker就可已免费部署&lt;/p&gt;
-&lt;!-- more --&gt;
+          &lt;p&gt;对于国内的GitHub用户来说，下载项目文件到本地是一个非常头疼的问题，本人在逛GitHub的时候，无意间发现了这一个开源的项目，实测下载项目文件速度提升巨大。项目里讲到可以不用服务器，直接使用cloudflare里的worker就可已免费部署。&lt;/p&gt;
 &lt;h5 id=&#34;项目地址&#34;&gt;项目地址&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/hunshcn/gh-proxy&#34;&gt;https://github.com/hunshcn/gh-proxy&lt;/a&gt;&lt;br&gt;
-&lt;img src=&#34;https://chuguo.netlify.app/img/2020-10-4/4ae0d3a701ffb5f068626db881f11611&#34; alt=&#34;enter description here&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/hunshcn/gh-proxy&#34;&gt;https://github.com/hunshcn/gh-proxy&lt;/a&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://chuguo.netlify.app/img/2020-10-4/4ae0d3a701ffb5f068626db881f11611&#34; alt=&#34;enter description here&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
 &lt;h5 id=&#34;部署方法&#34;&gt;部署方法&lt;/h5&gt;
 &lt;p&gt;打开首页：&lt;a href=&#34;https://www.cloudflare.com&#34;&gt;https://www.cloudflare.com&lt;/a&gt;&lt;br&gt;
 注册，登陆，找到&lt;code&gt;Workers&lt;/code&gt;&lt;br&gt;
 &lt;img src=&#34;https://chuguo.netlify.app/img/2020-10-4/64ab17737b6060e5c484a81c33aabbe7&#34; alt=&#34;enter description here&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
 &lt;p&gt;然后&lt;code&gt;创建 Worker&lt;/code&gt;&lt;/p&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://chuguo.netlify.app/img/2020-10-4/2635c550d67a4c9e593f206422c7ca36&#34; alt=&#34;enter description here&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://chuguo.netlify.app/img/2020-10-4/2635c550d67a4c9e593f206422c7ca36&#34; alt=&#34;enter description here&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
 &lt;p&gt;删除原有的代码，并复制下面这段代码到左侧代码框&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;&#39;use strict&#39;
 
