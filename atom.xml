@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiuzhuowei.netlify.app</id>
     <title>Gridea</title>
-    <updated>2020-10-04T06:58:39.512Z</updated>
+    <updated>2020-10-04T07:18:39.744Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiuzhuowei.netlify.app"/>
     <link rel="self" href="https://qiuzhuowei.netlify.app/atom.xml"/>
@@ -11,12 +11,13 @@
     <icon>https://qiuzhuowei.netlify.app/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
     <entry>
-        <title type="html"><![CDATA[2020-10-04 1:50:21 document]]></title>
-        <id>https://qiuzhuowei.netlify.app/post/2020-10-04/</id>
-        <link href="https://qiuzhuowei.netlify.app/post/2020-10-04/">
+        <title type="html"><![CDATA[2020-10-04document]]></title>
+        <id>https://qiuzhuowei.netlify.app/post/2020-10-04document/</id>
+        <link href="https://qiuzhuowei.netlify.app/post/2020-10-04document/">
         </link>
-        <updated>2020-10-03T17:50:21.000Z</updated>
-        <content type="html"><![CDATA[<p>是德国发稿费<img src="https://chuguo.netlify.app/%E5%B0%8F%E4%B9%A6%E5%8C%A0/facc6cc3-cf06-42d1-a02c-93136c4cd57e_06.jpg" alt="enter description here" loading="lazy"></p>
+        <updated>2020-10-04T07:15:46.000Z</updated>
+        <content type="html"><![CDATA[<p>ergerg erge ger erg er er</p>
+<figure data-type="image" tabindex="1"><img src="https://chuguo.netlify.app/img/2020-10-4/4ef92c108e746b4c08cd7acc0970d90e" alt="enter description here" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
