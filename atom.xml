@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiuzhuowei.netlify.app</id>
     <title>Gridea</title>
-    <updated>2020-10-04T08:01:52.386Z</updated>
+    <updated>2020-10-04T08:25:21.161Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiuzhuowei.netlify.app"/>
     <link rel="self" href="https://qiuzhuowei.netlify.app/atom.xml"/>
@@ -22,173 +22,179 @@
 <img src="https://chuguo.netlify.app/img/2020-10-4/4ae0d3a701ffb5f068626db881f11611" alt="enter description here" loading="lazy"></p>
 <h5 id="部署方法">部署方法</h5>
 <p>打开首页：<a href="https://www.cloudflare.com">https://www.cloudflare.com</a><br>
-注册，登陆，<code>Start building</code>，取一个子域名，<code>Create a Worker</code>。<br>
-复制下面这段代码<br>
-`'use strict'</p>
-<p>/**</p>
-<ul>
-<li>static files (404.html, sw.js, conf.js)<br>
-<em>/<br>
-const ASSET_URL = 'https://hunshcn.github.io/gh-proxy'<br>
-// 前缀，如果自定义路由为example.com/gh/</em>，将PREFIX改为 '/gh/'，注意，少一个杠都会错！<br>
-const PREFIX = '/'<br>
-// git使用cnpmjs镜像、分支文件使用jsDelivr镜像的开关，0为关闭，默认开启<br>
-const Config = {<br>
-jsdelivr: 1,<br>
-cnpmjs: 1<br>
-}</li>
-</ul>
-<p>/** @type {RequestInit} <em>/<br>
-const PREFLIGHT_INIT = {<br>
-status: 204,<br>
-headers: new Headers({<br>
-'access-control-allow-origin': '</em>',<br>
-'access-control-allow-methods': 'GET,POST,PUT,PATCH,TRACE,DELETE,HEAD,OPTIONS',<br>
-'access-control-max-age': '1728000',<br>
-}),<br>
-}</p>
-<p>/**</p>
-<ul>
-<li>@param {any} body</li>
-<li>@param {number} status</li>
-<li>@param {Object&lt;string, string&gt;} headers<br>
-<em>/<br>
-function makeRes(body, status = 200, headers = {}) {<br>
-headers['access-control-allow-origin'] = '</em>'<br>
-return new Response(body, {status, headers})<br>
-}</li>
-</ul>
-<p>/**</p>
-<ul>
-<li>@param {string} urlStr<br>
-*/<br>
-function newUrl(urlStr) {<br>
-try {<br>
-return new URL(urlStr)<br>
-} catch (err) {<br>
-return null<br>
-}<br>
-}</li>
-</ul>
-<p>addEventListener('fetch', e =&gt; {<br>
-const ret = fetchHandler(e)<br>
-.catch(err =&gt; makeRes('cfworker error:\n' + err.stack, 502))<br>
-e.respondWith(ret)<br>
-})</p>
-<p>/**</p>
-<ul>
-<li>@param {FetchEvent} e<br>
-<em>/<br>
-async function fetchHandler(e) {<br>
-const req = e.request<br>
-const urlStr = req.url<br>
-const urlObj = new URL(urlStr)<br>
-let path = urlObj.searchParams.get('q')<br>
-if (path) {<br>
-return Response.redirect('https://' + urlObj.host + PREFIX + path, 301)<br>
-}<br>
-// cfworker 会把路径中的 <code>//</code> 合并成 <code>/</code><br>
-path = urlObj.href.substr(urlObj.origin.length + PREFIX.length).replace(/^https?:/+/, 'https://')<br>
-const exp1 = /^(?:https?😕/)?github.com/.+?/.+?/(?:releases|archive)/.</em><span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \/ at position 30: … = /^(?:https?:\̲/̲\/)?github\.com…'>/i
- const exp2 = /^(?:https?:\/\/)?github\.com\/.+?\/.+?\/(?:blob)\/.*</span>/i<br>
-const exp3 = /^(?:https?😕/)?github.com/.+?/.+?/(?:info|git-).*<span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \/ at position 30: … = /^(?:https?:\̲/̲\/)?raw\.github…'>/i
- const exp4 = /^(?:https?:\/\/)?raw\.githubusercontent\.com\/.+?\/.+?\/.+?\/.+</span>/i<br>
-if (path.search(exp1) === 0 || !Config.cnpmjs &amp;&amp; (path.search(exp3) === 0 || path.search(exp4) === 0)) {<br>
-return httpHandler(req, path)<br>
-} else if (path.search(exp2) === 0) {<br>
-if (Config.jsdelivr){<br>
-const newUrl = path.replace('/blob/', '@').replace(/^(?:https?😕/)?github.com/, 'https://cdn.jsdelivr.net/gh')<br>
-return Response.redirect(newUrl, 302)<br>
-}else{<br>
-path = path.replace('/blob/', '/raw/')<br>
-return httpHandler(req, path)<br>
-}<br>
-} else if (path.search(exp3) === 0) {<br>
-const newUrl = path.replace(/^(?:https?😕/)?github.com/, 'https://github.com.cnpmjs.org')<br>
-return Response.redirect(newUrl, 302)<br>
-} else if (path.search(exp4) === 0) {<br>
-const newUrl = path.replace(/(?&lt;=com/.+?/.+?)/(.+?/)/, '@$1').replace(/^(?:https?😕/)?raw.githubusercontent.com/, 'https://cdn.jsdelivr.net/gh')<br>
-return Response.redirect(newUrl, 302)<br>
-} else {<br>
-return fetch(ASSET_URL + path)<br>
-}<br>
-}</li>
-</ul>
-<p>/**</p>
-<ul>
-<li>
-<p>@param {Request} req</p>
-</li>
-<li>
-<p>@param {string} pathname<br>
-*/<br>
-function httpHandler(req, pathname) {<br>
-const reqHdrRaw = req.headers</p>
-<p>// preflight<br>
-if (req.method === 'OPTIONS' &amp;&amp;<br>
-reqHdrRaw.has('access-control-request-headers')<br>
-) {<br>
-return new Response(null, PREFLIGHT_INIT)<br>
-}</p>
-<p>let rawLen = ''</p>
-<p>const reqHdrNew = new Headers(reqHdrRaw)</p>
-<p>let urlStr = pathname<br>
-if (urlStr.startsWith('github')) {<br>
-urlStr = 'https://' + urlStr<br>
-}<br>
-const urlObj = newUrl(urlStr)</p>
-<p>/** @type {RequestInit} */<br>
-const reqInit = {<br>
-method: req.method,<br>
-headers: reqHdrNew,<br>
-redirect: 'follow',<br>
-body: req.body<br>
-}<br>
-return proxy(urlObj, reqInit, rawLen, 0)<br>
-}</p>
-</li>
-</ul>
-<p>/**<br>
-*</p>
-<ul>
-<li>
-<p>@param {URL} urlObj</p>
-</li>
-<li>
-<p>@param {RequestInit} reqInit<br>
-*/<br>
-async function proxy(urlObj, reqInit, rawLen) {<br>
-const res = await fetch(urlObj.href, reqInit)<br>
-const resHdrOld = res.headers<br>
-const resHdrNew = new Headers(resHdrOld)</p>
-<p>// verify<br>
-if (rawLen) {<br>
-const newLen = resHdrOld.get('content-length') || ''<br>
-const badLen = (rawLen !== newLen)</p>
-<pre><code> if (badLen) {
-     return makeRes(res.body, 400, {
-         '--error': `bad len: ${newLen}, except: ${rawLen}`,
-         'access-control-expose-headers': '--error',
-     })
- }
+注册，登陆，找到<code>Workers</code><br>
+<img src="https://chuguo.netlify.app/img/2020-10-4/64ab17737b6060e5c484a81c33aabbe7" alt="enter description here" loading="lazy"></p>
+<p>然后<code>创建 Worker</code></p>
+<figure data-type="image" tabindex="1"><img src="https://chuguo.netlify.app/img/2020-10-4/2635c550d67a4c9e593f206422c7ca36" alt="enter description here" loading="lazy"></figure>
+<p>删除原有的代码，并复制下面这段代码到左侧代码框</p>
+<pre><code class="language-javascript">'use strict'
+
+/**
+ * static files (404.html, sw.js, conf.js)
+ */
+const ASSET_URL = 'https://hunshcn.github.io/gh-proxy'
+// 前缀，如果自定义路由为example.com/gh/*，将PREFIX改为 '/gh/'，注意，少一个杠都会错！
+const PREFIX = '/'
+// git使用cnpmjs镜像、分支文件使用jsDelivr镜像的开关，0为关闭，默认开启
+const Config = {
+    jsdelivr: 1,
+    cnpmjs: 1
+}
+
+/** @type {RequestInit} */
+const PREFLIGHT_INIT = {
+    status: 204,
+    headers: new Headers({
+        'access-control-allow-origin': '*',
+        'access-control-allow-methods': 'GET,POST,PUT,PATCH,TRACE,DELETE,HEAD,OPTIONS',
+        'access-control-max-age': '1728000',
+    }),
+}
+
+/**
+ * @param {any} body
+ * @param {number} status
+ * @param {Object&lt;string, string&gt;} headers
+ */
+function makeRes(body, status = 200, headers = {}) {
+    headers['access-control-allow-origin'] = '*'
+    return new Response(body, {status, headers})
+}
+
+
+/**
+ * @param {string} urlStr
+ */
+function newUrl(urlStr) {
+    try {
+        return new URL(urlStr)
+    } catch (err) {
+        return null
+    }
+}
+
+
+addEventListener('fetch', e =&gt; {
+    const ret = fetchHandler(e)
+        .catch(err =&gt; makeRes('cfworker error:\n' + err.stack, 502))
+    e.respondWith(ret)
+})
+
+
+/**
+ * @param {FetchEvent} e
+ */
+async function fetchHandler(e) {
+    const req = e.request
+    const urlStr = req.url
+    const urlObj = new URL(urlStr)
+    let path = urlObj.searchParams.get('q')
+    if (path) {
+        return Response.redirect('https://' + urlObj.host + PREFIX + path, 301)
+    }
+    // cfworker 会把路径中的 `//` 合并成 `/`
+    path = urlObj.href.substr(urlObj.origin.length + PREFIX.length).replace(/^https?:\/+/, 'https://')
+    const exp1 = /^(?:https?:\/\/)?github\.com\/.+?\/.+?\/(?:releases|archive)\/.*$/i
+    const exp2 = /^(?:https?:\/\/)?github\.com\/.+?\/.+?\/(?:blob)\/.*$/i
+    const exp3 = /^(?:https?:\/\/)?github\.com\/.+?\/.+?\/(?:info|git-).*$/i
+    const exp4 = /^(?:https?:\/\/)?raw\.githubusercontent\.com\/.+?\/.+?\/.+?\/.+$/i
+    if (path.search(exp1) === 0 || !Config.cnpmjs &amp;&amp; (path.search(exp3) === 0 || path.search(exp4) === 0)) {
+        return httpHandler(req, path)
+    } else if (path.search(exp2) === 0) {
+        if (Config.jsdelivr){
+            const newUrl = path.replace('/blob/', '@').replace(/^(?:https?:\/\/)?github\.com/, 'https://cdn.jsdelivr.net/gh')
+            return Response.redirect(newUrl, 302)
+        }else{
+            path = path.replace('/blob/', '/raw/')
+            return httpHandler(req, path)
+        }
+    } else if (path.search(exp3) === 0) {
+        const newUrl = path.replace(/^(?:https?:\/\/)?github\.com/, 'https://github.com.cnpmjs.org')
+        return Response.redirect(newUrl, 302)
+    } else if (path.search(exp4) === 0) {
+        const newUrl = path.replace(/(?&lt;=com\/.+?\/.+?)\/(.+?\/)/, '@$1').replace(/^(?:https?:\/\/)?raw\.githubusercontent\.com/, 'https://cdn.jsdelivr.net/gh')
+        return Response.redirect(newUrl, 302)
+    } else {
+        return fetch(ASSET_URL + path)
+    }
+}
+
+
+/**
+ * @param {Request} req
+ * @param {string} pathname
+ */
+function httpHandler(req, pathname) {
+    const reqHdrRaw = req.headers
+
+    // preflight
+    if (req.method === 'OPTIONS' &amp;&amp;
+        reqHdrRaw.has('access-control-request-headers')
+    ) {
+        return new Response(null, PREFLIGHT_INIT)
+    }
+
+    let rawLen = ''
+
+    const reqHdrNew = new Headers(reqHdrRaw)
+
+    let urlStr = pathname
+    if (urlStr.startsWith('github')) {
+        urlStr = 'https://' + urlStr
+    }
+    const urlObj = newUrl(urlStr)
+
+    /** @type {RequestInit} */
+    const reqInit = {
+        method: req.method,
+        headers: reqHdrNew,
+        redirect: 'follow',
+        body: req.body
+    }
+    return proxy(urlObj, reqInit, rawLen, 0)
+}
+
+
+/**
+ *
+ * @param {URL} urlObj
+ * @param {RequestInit} reqInit
+ */
+async function proxy(urlObj, reqInit, rawLen) {
+    const res = await fetch(urlObj.href, reqInit)
+    const resHdrOld = res.headers
+    const resHdrNew = new Headers(resHdrOld)
+
+    // verify
+    if (rawLen) {
+        const newLen = resHdrOld.get('content-length') || ''
+        const badLen = (rawLen !== newLen)
+
+        if (badLen) {
+            return makeRes(res.body, 400, {
+                '--error': `bad len: ${newLen}, except: ${rawLen}`,
+                'access-control-expose-headers': '--error',
+            })
+        }
+    }
+    const status = res.status
+    resHdrNew.set('access-control-expose-headers', '*')
+    resHdrNew.set('access-control-allow-origin', '*')
+
+    resHdrNew.delete('content-security-policy')
+    resHdrNew.delete('content-security-policy-report-only')
+    resHdrNew.delete('clear-site-data')
+
+    return new Response(res.body, {
+        status,
+        headers: resHdrNew,
+    })
+}
 </code></pre>
-<p>}<br>
-const status = res.status<br>
-resHdrNew.set('access-control-expose-headers', '<em>')<br>
-resHdrNew.set('access-control-allow-origin', '</em>')</p>
-<p>resHdrNew.delete('content-security-policy')<br>
-resHdrNew.delete('content-security-policy-report-only')<br>
-resHdrNew.delete('clear-site-data')</p>
-<p>return new Response(res.body, {<br>
-status,<br>
-headers: resHdrNew,<br>
-})<br>
-}<code>到左侧代码框，</code>Save and deploy`。如果正常，右侧应显示首页。</p>
-</li>
-</ul>
-<p><code>index.js</code>默认配置下clone走github.com.cnpmjs.org，项目文件会走jsDeliver，如需走worker，修改Config变量即可</p>
-<p><code>ASSET_URL</code>是静态资源的url（实际上就是现在显示出来的那个输入框单页面）</p>
-<p><code>PREFIX</code>是前缀，默认（根路径情况为&quot;/&quot;），如果自定义路由为example.com/gh/*，请将PREFIX改为 '/gh/'，注意，少一个杠都会错！</p>
+<p>最后<code>保存并部署</code>。<br>
+<img src="https://chuguo.netlify.app/img/2020-10-4/d2f3871731b8e55246642c1d0c417b2c" alt="enter description here" loading="lazy"></p>
+<p>现在就可以试看看了<br>
+<img src="https://chuguo.netlify.app/img/2020-10-4/56189addc2d0164f5d6b40c0eb832fd9" alt="enter description here" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
